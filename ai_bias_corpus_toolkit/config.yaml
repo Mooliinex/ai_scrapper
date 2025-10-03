@@ -1,0 +1,41 @@
+keywords:
+  - "algorithmic bias"
+  - "AI bias"
+  - "algorithmic discrimination"
+  - "fairness in AI"
+  - "biais algorithmiques"
+  - "discrimination algorithmique"
+  - "justice algorithmique"
+  - "équité algorithmique"
+
+languages:
+  - en
+  - fr
+
+time_window:
+  since: "2015-05-01"
+  until: "2025-10-01"
+
+sources:
+  rss:
+    - "https://news.google.com/rss/search?q=algorithmic+bias+OR+AI+bias&hl=en"
+    - "https://news.google.com/rss/search?q=biais+algorithmiques+OR+discrimination+algorithmique&hl=fr"
+
+  openalex:
+    query: "(title.search:algorithmic bias OR abstract.search:algorithmic bias OR title.search:discrimination algorithmique OR abstract.search:discrimination algorithmique)"
+    per_page: 200
+    mailto: "ton@email"   # remplace par ton adresse
+
+  gdelt:
+    gkg_search: '("algorithmic bias" OR "AI bias" OR "discrimination algorithmique" OR "biais algorithmiques")'
+    max_records: 5000
+
+  ngo_rss:
+    - "https://ainowinstitute.org/blog/rss.xml"
+    - "https://edri.org/feed/"
+    - "https://www.cnil.fr/fr/actualites/rss.xml"
+
+rate_limit:
+  sleep_seconds: 1.0
+  retries: 3
+  timeout: 30
